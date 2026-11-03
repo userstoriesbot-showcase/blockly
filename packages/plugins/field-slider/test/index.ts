@@ -266,6 +266,9 @@ function createWorkspace(
 document.addEventListener('DOMContentLoaded', function () {
   const defaultOptions: Blockly.BlocklyOptions = {
     toolbox: jsonToolbox,
+    // Demo only: the sounds load from static.blockly.com, which the offline
+    // recorder cannot reach.
+    sounds: false,
   };
   const rootElement = document.getElementById('root');
   if (rootElement) {
